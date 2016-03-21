@@ -1,0 +1,18 @@
+diff --git a/xbmc/cores/AudioEngine/Sinks/AESinkALSA.cpp b/xbmc/cores/AudioEngine/Sinks/AESinkALSA.cpp
+index b354708..cadd7a6 100644
+--- a/xbmc/cores/AudioEngine/Sinks/AESinkALSA.cpp
++++ b/xbmc/cores/AudioEngine/Sinks/AESinkALSA.cpp
+@@ -523,13 +523,6 @@ bool CAESinkALSA::Initialize(AEAudioFormat &format, std::string &device)
+   {
+     m_passthrough   = false;
+   }
+-#if defined(HAS_LIBAMCODEC)
+-  if (aml_present())
+-  {
+-    aml_set_audio_passthrough(m_passthrough);
+-    device = "default";
+-  }
+-#endif
+ 
+   if (inconfig.channels == 0)
+   {

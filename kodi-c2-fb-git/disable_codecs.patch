@@ -1,0 +1,24 @@
+diff --git a/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecAmlogic.cpp b/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecAmlogic.cpp
+index 8f2e516..9e2e7d4 100644
+--- a/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecAmlogic.cpp
++++ b/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecAmlogic.cpp
+@@ -122,9 +122,6 @@ bool CDVDVideoCodecAmlogic::Open(CDVDStreamInfo &hints, CDVDCodecOptions &option
+       // amcodec can't handle h263
+       return false;
+       break;
+-    case AV_CODEC_ID_FLV1:
+-      m_pFormatName = "am-flv1";
+-      break;
+     case AV_CODEC_ID_RV10:
+     case AV_CODEC_ID_RV20:
+     case AV_CODEC_ID_RV30:
+@@ -136,9 +133,6 @@ bool CDVDVideoCodecAmlogic::Open(CDVDStreamInfo &hints, CDVDCodecOptions &option
+     case AV_CODEC_ID_VC1:
+       m_pFormatName = "am-vc1";
+       break;
+-    case AV_CODEC_ID_WMV3:
+-      m_pFormatName = "am-wmv3";
+-      break;
+     case AV_CODEC_ID_AVS:
+     case AV_CODEC_ID_CAVS:
+       m_pFormatName = "am-avs";
